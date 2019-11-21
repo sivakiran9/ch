@@ -11,7 +11,7 @@ pipeline {
                 steps {
  
         
-                    sh ('/home/siva/Documents/chef/nginx4/cookbooks')     
+                    sh ( 'cd /home/siva/Documents/chef/nginx4/cookbooks' )      
 
 
                   } 
