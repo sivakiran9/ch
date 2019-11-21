@@ -23,7 +23,20 @@ pipeline {
                
                    sh ( 'knife cookbook upload nginx4' )
 
+                       
+                   }
+                  }
+
+
+         stage('Bootstrap the node') {
+               steps {
+                  
+                   sh ( 'knife bootstrap 172.17.0.2 --ssh-user sai --ssh-password 'sai' --sudo --use-sudo-password --node-name chefserver1' )
+
                  }
                 }
+
+              
+              
              }
        } 
