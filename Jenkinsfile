@@ -21,7 +21,7 @@ pipeline {
          stage('Upload cookbook') {
                 steps {
                
-                   sh ' knife cookbook upload nginx4 '
+                   sh 'knife cookbook upload nginx4'
 
                  }
                 }
