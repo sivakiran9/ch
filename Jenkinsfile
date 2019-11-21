@@ -7,7 +7,7 @@ pipeline {
                                 checkout scm                            }
                     }
         
-        stage('Build') {
+        stage('Gotocookbook') {
                 steps {
  
         
@@ -16,6 +16,14 @@ pipeline {
 
                   } 
 
-                 } 
+                 }
+
+         stage('Upload cookbook') {
+                steps {
+               
+                   sh ' knife cookbook upload nginx4 '
+
+                 }
+                }
              }
        } 
