@@ -6,6 +6,16 @@ pipeline {
                 steps {
                                 checkout scm                            }
                     }
-             }
+        
+        stage('Build') {
+                steps {
+ 
+        
+                    sh ('/home/siva/Documents/chef/nginx4/cookbooks')     
 
-     }
+
+                  } 
+
+                 } 
+             }
+       } 
