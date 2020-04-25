@@ -11,7 +11,7 @@ pipeline {
                 steps {
  
         
-                    sh ( 'cd /home/siva/Documents/chef/cookbooks/nginx' )      
+                    sh ( 'cd /home/siva/Documents/chef/cookbooks/nginx4' )      
 
 
                   } 
@@ -21,7 +21,7 @@ pipeline {
          stage('Upload cookbook') {
                 steps {
                
-                   sh ( 'knife cookbook upload nginx' )
+                   sh ( 'knife cookbook upload nginx4' )
 
                        
                    }
