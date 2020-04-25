@@ -11,7 +11,7 @@ pipeline {
                 steps {
  
         
-                    sh ( 'cd /home/siva/Documents/chef/nginx4/cookbooks' )      
+                    sh ( 'cd /home/siva/Documents/chef/cookbooks/nginx' )      
 
 
                   } 
@@ -21,7 +21,7 @@ pipeline {
          stage('Upload cookbook') {
                 steps {
                
-                   sh ( 'knife cookbook upload nginx4' )
+                   sh ( 'knife cookbook upload nginx' )
 
                        
                    }
@@ -31,7 +31,7 @@ pipeline {
          stage('Bootstrap the node') {
                steps {
                   
-                   sh ( 'knife bootstrap 172.17.0.2 --ssh-user sai --ssh-password 'sai' --sudo --use-sudo-password --node-name chefserver1' )
+                   sh ( 'knife bootstrap 172.17.0.2 --ssh-user sai --ssh-password 'sai' --sudo --use-sudo-password --node-name chef' )
 
                  }
                 }
